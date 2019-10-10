@@ -90,6 +90,12 @@
 								},
 								"enableStaging": false
 							},
+							"inputs": [
+								{
+									"referenceName": "AmazonS3DS",
+									"type": "DatasetReference"
+								}
+							],
 							"outputs": [
 								{
 									"referenceName": "BlobStorageDS",

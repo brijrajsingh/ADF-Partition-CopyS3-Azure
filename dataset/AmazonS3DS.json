@@ -1,0 +1,16 @@
+{
+	"name": "AmazonS3DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AmazonS3LinkedSvc",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location"
+			}
+		}
+	}
+}
