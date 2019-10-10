@@ -67,8 +67,41 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "BinarySource",
+									"storeSettings": {
+										"type": "AmazonS3ReadSettings",
+										"recursive": true,
+										"modifiedDatetimeStart": {
+											"value": "@{item()['Prop_0']}",
+											"type": "Expression"
+										},
+										"modifiedDatetimeEnd": {
+											"value": "@{item()['Prop_1']}",
+											"type": "Expression"
+										}
+									}
+								},
+								"sink": {
+									"type": "BinarySink",
+									"storeSettings": {
+										"type": "AzureBlobStorageWriteSettings"
+									}
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "AmazonS3DS",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "BlobStorageDS",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
