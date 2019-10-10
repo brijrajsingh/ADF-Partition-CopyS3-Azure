@@ -35,7 +35,8 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "BatchCopyLoop",
+				"description": "Foreach loop to run batch of partitions",
 				"type": "ForEach",
 				"dependsOn": [
 					{
