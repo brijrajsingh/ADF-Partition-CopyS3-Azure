@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "PartitionDataDS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage_partitionInfo",
