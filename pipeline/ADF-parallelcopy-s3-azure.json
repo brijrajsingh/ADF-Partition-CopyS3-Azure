@@ -1,0 +1,7 @@
+{
+	"name": "ADF-parallelcopy-s3-azure",
+	"properties": {
+		"description": "Pipeline to run batch of copy activities in parallel using a forloop which iterates through given partition",
+		"annotations": []
+	}
+}
