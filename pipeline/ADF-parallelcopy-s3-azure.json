@@ -17,6 +17,20 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
 					"firstRowOnly": false
 				}
 			},
@@ -33,9 +47,14 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('LookupPartitions').output.value",
+						"type": "Expression"
+					},
+					"batchCount": 10,
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "CopyS3ToAzure",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
